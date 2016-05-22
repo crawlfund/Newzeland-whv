@@ -4,8 +4,8 @@
   "version": "1",
   "content_scripts": [{
     "run_at": "document_start",
-    "matches": ["https://onlineservices.immigration.govt.nz/WorkingHoliday/"],
-    "js": ["jquery-1.9.1.min.js","whv-get.js"]
+    "matches": ["https://onlineservices.immigration.govt.nz/WorkingHoliday/"],["https://onlineservices.immigration.govt.nz/WorkingHoliday/Wizard/*"]
+    "js": ["jquery-1.9.1.min.js","whv-get.js"],["jquery-1.9.1.min.js","personal1.js"]
   }],
   "permissions": [
     "http://lab.ocrking.com/*",
