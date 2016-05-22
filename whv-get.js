@@ -61,7 +61,9 @@ if(address == 'https://onlineservices.immigration.govt.nz/WorkingHoliday/'){
 	}
 else if(address.indexOf("Personal1")>0)
 {
-	if(document.getElementById('ctl00_ContentPlaceHolder1_addressContactDetails_address_countryDropDownList').value==0)
+//如果还没刷出来不停地刷
+if(document.getElementById('ctl00_ContentPlaceHolder1_addressContactDetails_address_countryDropDownList')==null)
+{document.getElementById('ctl00_ContentPlaceHolder1_wizardPageFooter_wizardPageNavigator_validateButton').click()}		if(document.getElementById('ctl00_ContentPlaceHolder1_addressContactDetails_address_countryDropDownList').value==0)
 	{
 	//openpage();
 	fill_personal1();
@@ -71,7 +73,9 @@ else if(address.indexOf("Personal1")>0)
 }
 else if(address.indexOf('Personal2')>0)
 {
-	if(document.getElementById('ctl00_ContentPlaceHolder1_identification_passportNumberTextBox').value==0)
+//如果还没刷出来不停地刷
+if(document.getElementById('ctl00_ContentPlaceHolder1_identification_passportNumberTextBox')==null)
+{document.getElementById('ctl00_ContentPlaceHolder1_wizardPageFooter_wizardPageNavigator_validateButton').click()}	if(document.getElementById('ctl00_ContentPlaceHolder1_identification_passportNumberTextBox').value==0)
 	fill_personal2();
 	else
 	window.close();
@@ -83,6 +87,9 @@ else if(address.indexOf('Personal3')>0)
 }
 else if(address.indexOf('Medical1')>0)
 {
+//如果还没刷出来不停地刷
+if(document.getElementById('ctl00_ContentPlaceHolder1_medicalConditions_renalDialysisDropDownList')==null)
+{document.getElementById('ctl00_ContentPlaceHolder1_wizardPageFooter_wizardPageNavigator_validateButton').click()}
 	if(document.getElementById('ctl00_ContentPlaceHolder1_medicalConditions_renalDialysisDropDownList').selectedIndex==0)
 	fill_Medical1();
 else
@@ -91,6 +98,9 @@ else
 }
 else if(address.indexOf('Character')>0)
 {
+//如果还没刷出来不停地刷
+if(document.getElementById('ctl00_ContentPlaceHolder1_character_imprisonment5YearsDropDownList')==null)
+{document.getElementById('ctl00_ContentPlaceHolder1_wizardPageFooter_wizardPageNavigator_validateButton').click()}
 	if(document.getElementById('ctl00_ContentPlaceHolder1_character_imprisonment5YearsDropDownList').selectedIndex==0)
 	fill_Character();
 else
@@ -99,7 +109,8 @@ else
 else if(address.indexOf('WorkingHoliday')>0)
 {
 //如果还没刷出来不停地刷
-if(document.getElementById('ctl00_ContentPlaceHolder1_offshoreDetails_commonWHSQuestions_previousWhsPermitVisaDropDownList')==null)
+if(document.getElementById('ctl00_ContentPlaceHolder1_offshoreDetails_commonWHSQuestions_previousWhsPermitVisaDropDownList')==null||document.getElementById('ctl00_ContentPlaceHolder1_wizardPageHeader_nav_submitImageButton')==null
+)
 {document.getElementById('ctl00_ContentPlaceHolder1_wizardPageFooter_wizardPageNavigator_validateButton').click()}
 		if(document.getElementById('ctl00_ContentPlaceHolder1_offshoreDetails_commonWHSQuestions_previousWhsPermitVisaDropDownList').selectedIndex==0)
 	fill_WorkingHoliday()
