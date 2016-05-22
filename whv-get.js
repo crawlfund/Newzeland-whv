@@ -6,20 +6,21 @@ var FName = 'Jinun';
 
 
 
-var windowNum=6;
-var w;
-
 var whv_get = function() {
-	
-w=window.open('https://onlineservices.immigration.govt.nz/WorkingHoliday/Wizard/Medical1.aspx?ApplicationId=1488860&IndividualType=Primary&IndividualIndex=1'); 
+
+	var appid = document.getElementById("ctl00_ContentPlaceHolder1_applicationList_applicationsDataGrid_ctl02_referenceNumberLabel").innerHTML;
+	alert('脚本开始运行！')
+	window.open('https://onlineservices.immigration.govt.nz/WorkingHoliday/Wizard/Personal1.aspx?ApplicationId='+appid+'&IndividualType=Primary&IndividualIndex=1'); 
+	window.open('https://onlineservices.immigration.govt.nz/WorkingHoliday/Wizard/Personal2.aspx?ApplicationId='+appid+'&IndividualType=Primary&IndividualIndex=1'); 
+	window.open('https://onlineservices.immigration.govt.nz/WorkingHoliday/Wizard/Personal3.aspx?ApplicationId='+appid+'&IndividualType=Primary&IndividualIndex=1'); 
+	window.open('https://onlineservices.immigration.govt.nz/WorkingHoliday/Wizard/Medical1.aspx?ApplicationId='+appid+'&IndividualType=Primary&IndividualIndex=1'); 
+	window.open('https://onlineservices.immigration.govt.nz/WorkingHoliday/Wizard/Character.aspx?ApplicationId='+appid+'&IndividualType=Primary&IndividualIndex=1'); 
+	window.open('https://onlineservices.immigration.govt.nz/WorkingHoliday/Wizard/WorkingHolidaySpecific.aspx?ApplicationId='+appid+'&IndividualType=Primary&IndividualIndex=1'); 
+
   
 
 
-document.getElementById('ctl00_ContentPlaceHolder1_wizardPageFooter_wizardPageNavigator_validateButton').click()
 
-document.getElementById('ctl00_ContentPlaceHolder1_personDetails_familyNameTextBox').value=FamilyName;
-  document.getElementById('ctl00_ContentPlaceHolder1_personDetails_givenName1Textbox').value=GivenName;
-document.getElementById('ctl00_ContentPlaceHolder1_personDetails_genderDropDownList').selectedIndex=Gender; 
  
 }
 

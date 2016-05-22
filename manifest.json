@@ -4,7 +4,7 @@
   "version": "1",
   "content_scripts": [{
     "run_at": "document_start",
-    "matches": ["https://onlineservices.immigration.govt.nz/WorkingHoliday/Wizard/*"],
+    "matches": ["https://onlineservices.immigration.govt.nz/WorkingHoliday/"],
     "js": ["jquery-1.9.1.min.js","whv-get.js"]
   }],
   "permissions": [
