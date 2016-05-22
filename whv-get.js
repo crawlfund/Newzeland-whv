@@ -7,7 +7,7 @@ var FName = 'Jinun';
 
 
 var whv_get = function() {
-
+	if(window.location.href == 'https://onlineservices.immigration.govt.nz/WorkingHoliday/'){
 	var appid = document.getElementById("ctl00_ContentPlaceHolder1_applicationList_applicationsDataGrid_ctl02_referenceNumberLabel").innerHTML;
 	alert('脚本开始运行！')
 	window.open('https://onlineservices.immigration.govt.nz/WorkingHoliday/Wizard/Personal1.aspx?ApplicationId='+appid+'&IndividualType=Primary&IndividualIndex=1'); 
@@ -16,7 +16,10 @@ var whv_get = function() {
 	window.open('https://onlineservices.immigration.govt.nz/WorkingHoliday/Wizard/Medical1.aspx?ApplicationId='+appid+'&IndividualType=Primary&IndividualIndex=1'); 
 	window.open('https://onlineservices.immigration.govt.nz/WorkingHoliday/Wizard/Character.aspx?ApplicationId='+appid+'&IndividualType=Primary&IndividualIndex=1'); 
 	window.open('https://onlineservices.immigration.govt.nz/WorkingHoliday/Wizard/WorkingHolidaySpecific.aspx?ApplicationId='+appid+'&IndividualType=Primary&IndividualIndex=1'); 
-
+}
+else{
+	alert('process')
+}
   
 
 
